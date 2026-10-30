@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sajid Mohamed Taha | Cybersécurité & Développeur</title>
+  <meta name="description" content="Portfolio de Sajid Mohamed Taha — Élève Ingénieur en Informatique, spécialiste Cybersécurité et Développeur." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+</head>
+<body>
+
+  <!-- Noise Grain Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Page Curtain Transition -->
+  <div id="page-curtain">
+    <div class="curtain-panel"></div>
+    <div class="curtain-panel"></div>
+    <div class="curtain-panel"></div>
+    <div class="curtain-panel"></div>
+    <div class="curtain-panel"></div>
+  </div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <header id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <div class="nav-monogram">SM</div>
+        <div class="nav-logo-text">
+          <span class="nav-name">Sajid M. Taha</span>
+          <span class="nav-sub">CYBER &amp; DEV</span>
+        </div>
+      </a>
+
+      <nav class="nav-pill" id="nav-desktop">
+        <a href="#skills" class="nav-link">Compétences</a>
+        <a href="#projects" class="nav-link">Projets</a>
+        <a href="#experience" class="nav-link">Parcours</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="CV_Sajid_Mohamed_Taha.pdf" target="_blank" download="CV_Sajid_Mohamed_Taha.pdf" class="nav-btn-cv" title="Télécharger le CV">
+          <i data-lucide="file-text"></i>
+          <span>Mon CV</span>
+          <i data-lucide="download" class="download-icon"></i>
+        </a>
+        <a href="tel:+212666491250" class="nav-btn-ghost">
+          <span class="pulse-dot"></span>
+          06 66 49 12 50
+        </a>
+        <a href="https://wa.me/212666491250" target="_blank" rel="noopener" class="nav-btn-solid">
+          WhatsApp <i data-lucide="arrow-up-right"></i>
+        </a>
+        <button id="theme-toggle" class="theme-toggle-pill" aria-label="Changer de thème" title="Basculer Mode Sombre / Mode Blanc">
+          <span class="theme-switch-knob">
+            <i data-lucide="sun" class="sun-icon"></i>
+            <i data-lucide="moon" class="moon-icon"></i>
+          </span>
+          <span class="theme-toggle-label">Blanc</span>
+        </button>
+      </div>
+
+      <button id="hamburger" class="hamburger" aria-label="Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="CV_Sajid_Mohamed_Taha.pdf" target="_blank" download="CV_Sajid_Mohamed_Taha.pdf" class="mobile-cv-link" onclick="closeMobile()">
+        <i data-lucide="file-text"></i> TÉLÉCHARGER MON CV (PDF)
+      </a>
+      <a href="#skills" onclick="closeMobile()">COMPÉTENCES</a>
+      <a href="#projects" onclick="closeMobile()">PROJETS</a>
+      <a href="#experience" onclick="closeMobile()">PARCOURS</a>
+      <a href="#contact" onclick="closeMobile()">CONTACT</a>
+      <div class="mobile-menu-footer">
+        <button id="mobile-theme-toggle" class="mobile-theme-btn">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+          <span>Mode Clair / Sombre</span>
+        </button>
+        <a href="tel:+212666491250">Tél: +212 666 49 12 50</a>
+        <a href="https://wa.me/212666491250" target="_blank">WhatsApp →</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="hero">
+      <!-- Ambient glows -->
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+
+      <div class="hero-container">
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <div class="status-pill">
+            <span class="pulse-dot"></span>
+            Disponible pour nouveaux projets &amp; stages
+          </div>
+
+          <h1 class="hero-heading">
+            Sajid<br/>Mohamed Taha.
+          </h1>
+
+          <p class="hero-role">
+            Élève Ingénieur en Informatique <span class="text-white">|</span> Cybersécurité &amp; Développeur
+          </p>
+
+          <p class="hero-desc">
+            Futur ingénieur passionné par la cybersécurité des infrastructures, l'analyse forensique, les opérations SOC et le développement d'applications robustes.
+          </p>
+
+          <div class="hero-actions">
+            <a href="CV_Sajid_Mohamed_Taha.pdf" target="_blank" download="CV_Sajid_Mohamed_Taha.pdf" class="btn-primary">
+              <i data-lucide="file-text"></i> Télécharger CV <i data-lucide="download"></i>
+            </a>
+            <a href="#projects" class="btn-ghost">
+              Explorer les projets <i data-lucide="arrow-down"></i>
+            </a>
+            <a href="#contact" class="btn-ghost">
+              Prendre contact <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/medtahasajid-del" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/mohamed-taha-sajid-604003391" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:medtahasajid@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+            <a href="tel:+212666491250" aria-label="Phone"><i data-lucide="phone"></i></a>
+          </div>
+        </div>
+
+        <!-- Right: 3D PC -->
+        <div class="hero-3d-wrap">
+          <div id="pc-3d-container">
+            <!-- Three.js canvas injected here by script -->
+          </div>
+          <!-- CSS 3D Laptop Fallback/Overlay with terminal screen -->
+          <div class="laptop-3d" id="laptop3d">
+            <div class="laptop-screen">
+              <div class="screen-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="screen-title">sajid@kali:~/soc</span>
+              </div>
+              <div class="screen-content" id="terminal-output">
+                <div class="term-line"><span class="term-prompt">sajid@kali:~$</span> <span class="term-cmd">sudo wazuh-manager status</span></div>
+                <div class="term-line term-ok">● wazuh-manager.service — active (running)</div>
+                <div class="term-line"><span class="term-prompt">sajid@kali:~$</span> <span class="term-cmd">suricata -c /etc/suricata/suricata.yaml -i eth0</span></div>
+                <div class="term-line term-info">[INFO] Suricata IDS/IPS engine started — monitoring traffic...</div>
+                <div class="term-line"><span class="term-prompt">sajid@kali:~$</span> <span class="term-cmd">cowrie start</span></div>
+                <div class="term-line term-ok">Starting Cowrie SSH/Telnet Honeypot...</div>
+                <div class="term-line term-warn">[ALERT] Intrusion detected from 192.168.1.105 → Port 22</div>
+                <div class="term-line"><span class="term-prompt">sajid@kali:~$</span> <span class="term-cmd">nmap -sV -sC 192.168.1.105</span></div>
+                <div class="term-line term-info">Scanning target... 47 ports open</div>
+                <div class="term-line"><span class="term-prompt">sajid@kali:~$</span> <span class="term-cmd typing" id="typing-cmd"></span><span class="cursor">▌</span></div>
+              </div>
+            </div>
+            <div class="laptop-base">
+              <div class="laptop-notch"></div>
+            </div>
+            <div class="laptop-shadow"></div>
+          </div>
+
+          <!-- Floating info badges near the 3D -->
+          <div class="float-badge fb-shield">
+            <i data-lucide="shield-check"></i> SOC Analyst
+          </div>
+          <div class="float-badge fb-code">
+            <i data-lucide="terminal"></i> DevSecOps
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-hint">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      </div>
+    </section>
+
+    <!-- ═══ SKILLS ═══ -->
+    <section id="skills" class="section-alt">
+      <div class="section-wrap">
+        <div class="section-top">
+          <div>
+            <p class="section-tag">// CAPABILITÉS TECHNIQUES</p>
+            <h2 class="section-title">Compétences &amp; Arsenal</h2>
+          </div>
+          <p class="section-subtitle">Technologies maîtrisées pour l'audit, la surveillance réseau et le génie logiciel.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Security -->
+          <div class="skill-card tilt-card" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.08">
+            <div class="skill-icon icon-red"><i data-lucide="shield-alert"></i></div>
+            <h3>Sécurité &amp; Réseaux</h3>
+            <p>Détection d'intrusion, analyse forensique &amp; durcissement.</p>
+            <div class="tags">
+              <span>Wazuh SIEM</span><span>Suricata IDS/IPS</span><span>Cowrie Honeypot</span><span>Nmap</span><span>Wireshark</span><span>FTK Imager</span><span>Kali Linux</span><span>PAM Hardening</span>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="skill-card tilt-card" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.08">
+            <div class="skill-icon icon-blue"><i data-lucide="code"></i></div>
+            <h3>Langages</h3>
+            <p>Programmation, scripts de sécurité et architectures web.</p>
+            <div class="tags">
+              <span>Python</span><span>PHP</span><span>SQL</span><span>Java (Android)</span><span>C / C++</span><span>JavaScript</span><span>HTML / CSS</span>
+            </div>
+          </div>
+
+          <!-- Frameworks -->
+          <div class="skill-card tilt-card" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.08">
+            <div class="skill-icon icon-purple"><i data-lucide="layers"></i></div>
+            <h3>Frameworks &amp; SDK</h3>
+            <p>Développement mobile natif et interfaces responsives.</p>
+            <div class="tags">
+              <span>Android SDK</span><span>Bootstrap 5</span><span>REST APIs</span><span>Gradle</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-card tilt-card" data-tilt data-tilt-max="6" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.08">
+            <div class="skill-icon icon-green"><i data-lucide="cpu"></i></div>
+            <h3>Outils &amp; Systèmes</h3>
+            <p>Bases de données, versioning et administration terminal.</p>
+            <div class="tags">
+              <span>MySQL</span><span>Git &amp; GitHub</span><span>Android Studio</span><span>Linux Bash</span><span>PowerShell</span><span>FFmpeg</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── LANGUES PARLÉES ─── -->
+        <div class="languages-bar">
+          <div class="languages-header">
+            <div class="lang-title-wrap">
+              <i data-lucide="globe" class="lang-globe-icon"></i>
+              <div>
+                <h3 class="lang-title">Langues Maîtrisées</h3>
+                <p class="lang-sub">Communication fluide en milieu professionnel international</p>
+              </div>
+            </div>
+            <span class="lang-badge">4 Langues</span>
+          </div>
+
+          <div class="languages-grid">
+            <!-- Arabe -->
+            <div class="lang-card">
+              <div class="lang-top">
+                <span class="lang-name">Arabe</span>
+                <span class="lang-level">Langue Maternelle</span>
+              </div>
+              <div class="lang-progress-wrap">
+                <div class="lang-progress-bar" style="width: 100%;"></div>
+              </div>
+              <div class="lang-dots">
+                <span class="dot-active"></span><span class="dot-active"></span><span class="dot-active"></span><span class="dot-active"></span><span class="dot-active"></span>
+              </div>
+            </div>
+
+            <!-- Français -->
+            <div class="lang-card">
+              <div class="lang-top">
+                <span class="lang-name">Français</span>
+                <span class="lang-level">Courant / Bilingue</span>
+              </div>
+              <div class="lang-progress-wrap">
+                <div class="lang-progress-bar" style="width: 85%;"></div>
+              </div>
+              <div class="lang-dots">
+                <span class="dot-active"></span><span class="dot-active"></span><span class="dot-active"></span><span class="dot-active"></span><span class="dot-inactive"></span>
+              </div>
+            </div>
+
+            <!-- Anglais -->
+            <div class="lang-card">
+              <div class="lang-top">
+                <span class="lang-name">Anglais</span>
+                <span class="lang-level">Technique &amp; Professionnel</span>
+              </div>
+              <div class="lang-progress-wrap">
+                <div class="lang-progress-bar" style="width: 65%;"></div>
+              </div>
+              <div class="lang-dots">
+                <span class="dot-active"></span><span class="dot-active"></span><span class="dot-active"></span><span class="dot-inactive"></span><span class="dot-inactive"></span>
+              </div>
+            </div>
+
+            <!-- Allemand -->
+            <div class="lang-card">
+              <div class="lang-top">
+                <span class="lang-name">Allemand</span>
+                <span class="lang-level">Intermédiaire (Apprentissage actif)</span>
+              </div>
+              <div class="lang-progress-wrap">
+                <div class="lang-progress-bar" style="width: 60%;"></div>
+              </div>
+              <div class="lang-dots">
+                <span class="dot-active"></span><span class="dot-active"></span><span class="dot-active"></span><span class="dot-inactive"></span><span class="dot-inactive"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PROJECTS — Bento Grid ═══ -->
+    <section id="projects">
+      <div class="section-wrap">
+        <div class="section-top">
+          <div>
+            <p class="section-tag">// RÉALISATIONS CONCRÈTES</p>
+            <h2 class="section-title">Projets Sélectionnés</h2>
+          </div>
+          <a href="https://github.com/medtahasajid-del" target="_blank" rel="noopener" class="section-link">
+            GitHub repos <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Card 1: Featured SOC -->
+          <div class="bento-card bento-large">
+            <div class="bento-glow bento-glow-violet"></div>
+            <div class="bento-inner">
+              <div class="bento-top">
+                <span class="bento-badge badge-violet">Projet Phare · Cybersécurité</span>
+                <a href="https://github.com/medtahasajid-del" target="_blank" class="bento-gh"><i data-lucide="github"></i></a>
+              </div>
+              <h3 class="bento-title">SOC-Inspired Training Project</h3>
+              <p class="bento-desc">Implémentation d'un environnement complet de sécurité avec honeypot Cowrie, IDS/IPS Suricata et SIEM Wazuh sous Ubuntu 22.04 LTS pour la simulation et la détection d'attaques en temps réel.</p>
+            </div>
+            <div class="bento-footer">
+              <span class="tech-pill">Wazuh SIEM</span>
+              <span class="tech-pill">Suricata IDS/IPS</span>
+              <span class="tech-pill">Cowrie Honeypot</span>
+              <span class="tech-pill">Ubuntu 22.04</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Android App -->
+          <div class="bento-card bento-small">
+            <div class="bento-glow bento-glow-green"></div>
+            <div class="bento-inner">
+              <div class="bento-top">
+                <span class="bento-badge badge-green">Mobile Android Natif</span>
+                <a href="https://github.com/medtahasajid-del" target="_blank" class="bento-gh"><i data-lucide="github"></i></a>
+              </div>
+              <h3 class="bento-title">deutschmitmedtaha</h3>
+              <p class="bento-desc">Application Android d'apprentissage de l'allemand, déployée en test fermé sur Google Play Console.</p>
+            </div>
+            <div class="bento-footer">
+              <span class="tech-pill">Android Studio</span>
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">Gradle</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Full Width -->
+          <div class="bento-card bento-full">
+            <div class="bento-glow bento-glow-orange"></div>
+            <div class="bento-inner bento-row">
+              <div class="bento-text-block">
+                <span class="bento-badge badge-orange">Application Web Full-Stack</span>
+                <h3 class="bento-title">Gestion d'Élevage</h3>
+                <p class="bento-desc">Système complet de gestion d'exploitation agricole : inventaire du cheptel, suivi des approvisionnements et calculs opérationnels.</p>
+              </div>
+              <div class="bento-side">
+                <div class="bento-footer">
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">Bootstrap</span>
+                </div>
+                <a href="https://github.com/medtahasajid-del" target="_blank" class="bento-source">Code source <i data-lucide="arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EXPERIENCE ═══ -->
+    <section id="experience" class="section-alt">
+      <div class="section-wrap narrow">
+        <div class="section-top">
+          <div>
+            <p class="section-tag">// FORMATION ET EXPÉRIENCE</p>
+            <h2 class="section-title">Cursus Académique</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1: EMSI -->
+          <div class="tl-item">
+            <div class="tl-dot tl-dot-active"></div>
+            <div class="tl-meta">
+              <span class="tl-date">2026 — Présent</span>
+              <span class="tl-status tl-current">● En cours</span>
+            </div>
+            <h3 class="tl-title">Élève Ingénieur en Informatique</h3>
+            <p class="tl-org">EMSI — École Marocaine des Sciences de l'Ingénieur</p>
+            <p class="tl-desc">Cycle d'ingénieur d'État en Génie Informatique. Architecture logicielle avancée, réseaux d'entreprise, sécurité des systèmes et ingénierie globale.</p>
+          </div>
+
+          <!-- Item 2: Stage SEWS Cabind -->
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-meta">
+              <span class="tl-date">Mars 2026</span>
+              <span class="tl-status tl-done">Stage Réalisé</span>
+            </div>
+            <h3 class="tl-title">Stage Service IT — Support &amp; Réseaux</h3>
+            <p class="tl-org">SEWS Cabind Maroc, Casablanca</p>
+            <p class="tl-desc">Immersion en entreprise au sein du département informatique : support technique utilisateurs, maintenance des équipements et participation active à la gestion de l'infrastructure réseau.</p>
+          </div>
+
+          <!-- Item 3: ISTA Hay Hassani 1 -->
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-meta">
+              <span class="tl-date">2024 — 2026</span>
+              <span class="tl-status tl-done">Diplômé</span>
+            </div>
+            <h3 class="tl-title">Technicien Spécialisé en Cybersécurité</h3>
+            <p class="tl-org">ISTA Hay Hassani 1, Casablanca</p>
+            <p class="tl-desc">Formation spécialisée : administration et sécurisation des systèmes et réseaux, détection des attaques, durcissement des environnements et gestion de la sécurité informatique.</p>
+          </div>
+
+          <!-- Item 4: Baccalauréat -->
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-meta">
+              <span class="tl-date">2023 — 2024</span>
+              <span class="tl-status tl-done">Obtenu</span>
+            </div>
+            <h3 class="tl-title">Baccalauréat Sciences Physiques (Option Français)</h3>
+            <p class="tl-org">Lycée Jaafar El Fassi, Casablanca</p>
+            <p class="tl-desc">Solides bases scientifiques, développement d'une rigueur d'analyse et d'un raisonnement logique approfondi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact">
+      <div class="contact-glow"></div>
+      <div class="section-wrap contact-center">
+        <p class="section-tag">// COLLABORATION</p>
+        <h2 class="contact-heading">Travaillons ensemble.</h2>
+        <p class="contact-desc">Vous cherchez un profil alliant cybersécurité rigoureuse et développement agile&nbsp;? Contactez-moi directement.</p>
+
+        <div class="contact-box">
+          <a href="tel:+212666491250" class="contact-phone">
+            <i data-lucide="phone"></i>
+            <span>+212 666 49 12 50</span>
+          </a>
+          <a href="https://wa.me/212666491250" target="_blank" rel="noopener" class="contact-wa">
+            WhatsApp Direct <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:medtahasajid@gmail.com"><i data-lucide="mail"></i> medtahasajid@gmail.com</a>
+          <span class="dot-sep">•</span>
+          <a href="https://github.com/medtahasajid-del" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <span class="dot-sep">•</span>
+          <a href="https://www.linkedin.com/in/mohamed-taha-sajid-604003391" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-inner">
+      <p>© 2026 Sajid Mohamed Taha. Tous droits réservés.</p>
+      <p class="footer-note">Conçu avec passion &amp; Next-Gen Dark Architecture</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
